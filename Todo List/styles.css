@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    width: 30rem;
+    background-color: white;
+    padding: 50px 80px;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.todo-header {
+    margin: 0;
+    font-size: 3rem;
+    color: red;
+}
+
+.logo {
+    height: 50px;
+}
+
+.add-tasks {
+    display: flex;
+    gap: 10px;
+}
+
+#input-element {
+    padding: 0 1rem;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+button {
+    background-color: red;
+    padding: 0 1rem;
+    width: 8rem;
+    height: 3rem;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+#list-container {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#list-container li {
+    padding: 20px 20px 20px 55px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: 20px;
+}
+
+#list-container li.checked {
+    color: rgb(236, 236, 161);
+    text-decoration: line-through;
+}
+
+#list-container li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+#list-container li span {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%
+}
+
+#list-container li span:hover {
+    background-color: #b4b7bd;
+    color: black;
+}
+
+@media(max-width:540px) {
+    body{
+        margin: 0 20px;
+    }
+
+    .todo {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    #input-element{
+        width: 18rem;
+    }
+
+    #add-btn{
+        width: 8rem;
+    }
+}
