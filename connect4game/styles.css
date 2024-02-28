@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+#gameboard{
+    height: 540px;
+    width: 630px;
+    background-color: blue;
+    border: 5px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.red-piece{
+    background-color: red;
+}
+
+
+.yellow-piece{
+    background-color:yellow;
+}
+
+@media(max-width:480px){
+    #gameboard{
+        height: 300px;
+        width: 360px;
+    }
+
+    .tile{
+        width: 30px;
+        height: 30px;
+    }
+}
